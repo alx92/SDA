@@ -1,0 +1,29 @@
+<!-- Title -->
+
+<div class="container-fluid ">
+
+    <div class="col-md-12 card">
+      <div class="card">
+        <img src="{{apod.url}}" class="mx-auto d-block responsive" alt="Astronomic picture of the day">
+        <div class="card-body">
+          <h4 class="card-title">Astronomic Picture of the Day</h4>
+          <p class="card-text">{{apod.explanation}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <input type="text" placeholder="Enter a date" (keyup.enter)="onSubmit($event)">
+
+  <!-- Image description
+
+  <footer>
+    <div class="container-fluid floor-fade">
+
+    </div>
+  </footer> -->
+
+
+<div class="container-fluid">
+

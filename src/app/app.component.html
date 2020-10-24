@@ -1,0 +1,37 @@
+<!-- Navigation -->
+
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+	<div class="container-fluid">
+		<a class="navbar-brand" routerLink="/"><img class="logo" src="/assets/img/logo.png"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+		data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+    </button>
+
+
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav mr-auto">
+
+				<li role="presentation" class="nav-item active">
+					<a class="nav-link" routerLink="/">Home</a>
+				</li>
+
+				<li role="presentation" class="nav-item">
+					<a class="nav-link" routerLink="/apod">Apod</a>
+				</li>
+
+				<li role="presentation" class="nav-item">
+					<a class="nav-link" routerLink="/neo">NeoWs</a>
+				</li>
+
+				<li role="presentation" class="nav-item">
+					<a class="nav-link" routerLink="/insight">InSight</a>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<router-outlet></router-outlet>
+
