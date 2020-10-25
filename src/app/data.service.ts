@@ -12,15 +12,16 @@ export class DataService {
 
   key = 'F2t9eSuecY54NKs8RH7PZ97xdeFXfg6M4A81sVbF';
 
-  startDate = '2020-09-09';
+  // startDate = '2020-09-09';
 
-  endDate = '2020-09-10';
+  // endDate = '2020-09-09';
 
-  neoUrl = 'https://api.nasa.gov/neo/rest/v1/feed?start_date=' +
-  this.startDate + '&end_date=' + this.endDate + '&api_key=' + this.key;
+  neoUrl = 'https://api.nasa.gov/neo/rest/v1/feed?start_date=';
 
-  getNeo() {
-    return this.http.get(this.neoUrl);
+
+  getNeo(startDate: string, endDate: string){
+    return this.http.get(this.neoUrl + startDate + '&end_date=' +
+    endDate + '&api_key=' + this.key);
   }
 
   getAllNeos() {

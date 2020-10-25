@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ApodComponent } from './apod/apod.component';
 import { NeoComponent } from './neo/neo.component';
 import { InsightComponent } from './insight/insight.component';
+import { DatePipe } from '@angular/common';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -31,7 +32,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
