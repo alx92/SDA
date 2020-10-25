@@ -10,39 +10,52 @@
   </div>
 	<div class="row cards">
     <div *ngFor="let n of neo.near_earth_objects[startDate]"
-    class="card col-md-4 col-sm-6 col-xs-12">
+    class="card col-md-4 col-sm-6 col-xs-12"
+    style="font-family: 'Roboto', sans-serif;">
+      <div class="card-img">
+
+      </div>
         <div class="card-body">
           <h4 class="card-title">
-            Asteroid name: {{ n.name }}
+            <a href="{{ n.nasa_jpl_url }}" target="_blank">
+              <strong>
+                Asteroid name: {{ n.name }} </strong></a>
+
            </h4>
           <h6 class="card-text">
+            <hr>
+            <strong>
             Absolute magnitude:
+            </strong>
             {{ n.absolute_magnitude_h}}
-            <br>
+            <hr>
+            <strong>
             Estimated diameter:
+            </strong>
             <br>
-            estimated diameter min:
-            {{ n.estimated_diameter.kilometers.estimated_diameter_min }}
-            <br>
-            Estimated diameter max:
-            {{ n.estimated_diameter.kilometers.estimated_diameter_max }}
-            <br>
+            <ul>
+              <li> estimated diameter min:
+                {{ n.estimated_diameter.kilometers.estimated_diameter_min }}</li>
+              <li> estimated diameter max:
+                {{ n.estimated_diameter.kilometers.estimated_diameter_max }}</li>
+            </ul>
+            <hr>
+            <strong>
             Miss distance:
+            </strong>
             <br>
-            {{ n.close_approach_data[0].miss_distance.astronomical }} astronomical
-            <br>
-            {{ n.close_approach_data[0].miss_distance.lunar }} lunar
-            <br>
-            {{ n.close_approach_data[0].miss_distance.kilometers }} kilometers
-            <br>
-            {{ n.close_approach_data[0].miss_distance.miles }} miles
-            <br>
+            <ul>
+              <li> astronomical: {{ n.close_approach_data[0].miss_distance.astronomical }} </li>
+              <li> lunar: {{ n.close_approach_data[0].miss_distance.lunar }} </li>
+              <li> kilometers: {{ n.close_approach_data[0].miss_distance.kilometers }} </li>
+            </ul>
+            <hr>
+            <strong>
             Relative velocity:
-            <br>
+            </strong>
             {{ n.close_approach_data[0].relative_velocity.kilometers_per_hour}} km/h
             <hr>
-            More info:
-            <a href="{{ n.nasa_jpl_url }}" target="_blank">{{ n.nasa_jpl_url }}</a></h6>
+            </h6>
         </div>
     </div>
 	</div>
