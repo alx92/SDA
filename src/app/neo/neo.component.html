@@ -1,27 +1,49 @@
-<!-- Image background -->
+<!-- Main part -->
 
-<div class="container-fluid">
-    <img class="img-fluid" src="/assets/img/shooting-start.jpg" alt="Responsive image">
-</div>
+<div class="container-fluid" *ngIf="neo?.near_earth_objects" >
+  <img class="img-fluid" src="/assets/img/shooting-start.jpg" alt="Responsive image">
+  <h1 class="neo-title">Asteroids, Oh my...<br>
+  </h1>
 
-<!-- <div>
-  <ul *ngIf="neo?.near_earth_objects">
-  <li *ngFor="let n of neo.near_earth_objects[startDate]">{{n.is_potentially_hazardous_asteroid}}</li>
-  </ul>
-</div> -->
-
-<!-- Second part -->
-
-<div *ngIf="neo?.near_earth_objects" class="container-fluid">
-	<div *ngFor="let n of neo.near_earth_objects[startDate]" class="row cards">
-
-			<div class="col-md-4">
-				<div class="card">
-					<div class="card-body">
-						<h4 class="card-title">{{ n.name }}}</h4>
-						<p class="card-text"></p>
-					</div>
-				</div>
-			</div>
+  <div class="number">
+    {{neo.element_count}}
+  </div>
+	<div class="row cards">
+    <div *ngFor="let n of neo.near_earth_objects[startDate]"
+    class="card col-md-4 col-sm-6 col-xs-12">
+        <div class="card-body">
+          <h4 class="card-title">
+            Asteroid name: {{ n.name }}
+           </h4>
+          <h6 class="card-text">
+            Absolute magnitude:
+            {{ n.absolute_magnitude_h}}
+            <br>
+            Estimated diameter:
+            <br>
+            estimated diameter min:
+            {{ n.estimated_diameter.kilometers.estimated_diameter_min }}
+            <br>
+            Estimated diameter max:
+            {{ n.estimated_diameter.kilometers.estimated_diameter_max }}
+            <br>
+            Miss distance:
+            <br>
+            {{ n.close_approach_data[0].miss_distance.astronomical }} astronomical
+            <br>
+            {{ n.close_approach_data[0].miss_distance.lunar }} lunar
+            <br>
+            {{ n.close_approach_data[0].miss_distance.kilometers }} kilometers
+            <br>
+            {{ n.close_approach_data[0].miss_distance.miles }} miles
+            <br>
+            Relative velocity:
+            <br>
+            {{ n.close_approach_data[0].relative_velocity.kilometers_per_hour}} km/h
+            <hr>
+            More info:
+            <a href="{{ n.nasa_jpl_url }}" target="_blank">{{ n.nasa_jpl_url }}</a></h6>
+        </div>
+    </div>
 	</div>
 </div>
