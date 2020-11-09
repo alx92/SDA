@@ -31,7 +31,11 @@
     "@angular-devkit/build-angular": "~0.1000.8",
     "@angular/cli": "~10.0.8",
     "@angular/compiler-cli": "~10.0.14",
+<<<<<<< HEAD
     "@types/node": "^12.11.1",
+=======
+    "@types/googlemaps": "^3.40.3",
+>>>>>>> 4d4999a... added maps to home page
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "codelyzer": "^6.0.0",

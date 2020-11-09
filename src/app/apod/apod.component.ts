@@ -27,13 +27,13 @@ export class ApodComponent implements OnInit {
   }
 
 
-  getAllApods() {
-    this.dataService.getApods().subscribe((apods: any[]) =>
-    {
-      this.apodCount = apods.length;
-      this.apods = apods;
-    });
-  }
+  // getAllApods() {
+  //   this.dataService.getApods().subscribe((apods: any[]) =>
+  //   {
+  //     this.apodCount = apods.length;
+  //     this.apods = apods;
+  //   });
+  // }
 
   getApod() {
   this.dataService.getApod().subscribe((apod: any) => {
@@ -42,7 +42,7 @@ export class ApodComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getAllApods();
+    // this.getAllApods();
     this.getApod();
   }
 }

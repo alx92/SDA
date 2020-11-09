@@ -12,11 +12,13 @@ export class DataService {
 
   key = 'F2t9eSuecY54NKs8RH7PZ97xdeFXfg6M4A81sVbF';
 
-  // startDate = '2020-09-09';
-
-  // endDate = '2020-09-09';
-
   neoUrl = 'https://api.nasa.gov/neo/rest/v1/feed?start_date=';
+
+  issUrl = 'http://api.open-notify.org/iss-now.json';
+
+  getIssLocation() {
+    return this.http.get(this.issUrl);
+  }
 
 
   getNeo(startDate: string, endDate: string){
