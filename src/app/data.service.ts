@@ -2,7 +2,6 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-
 @Injectable({ providedIn: 'root' })
 export class DataService {
 
@@ -13,13 +12,17 @@ export class DataService {
   key = 'F2t9eSuecY54NKs8RH7PZ97xdeFXfg6M4A81sVbF';
 
   neoUrl = 'https://api.nasa.gov/neo/rest/v1/feed?start_date=';
+  // neoUrl = 'https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=';
 
   issUrl = 'http://api.open-notify.org/iss-now.json';
+
+  // ISS
 
   getIssLocation() {
     return this.http.get(this.issUrl);
   }
 
+  // NeoWs
 
   getNeo(startDate: string, endDate: string){
     return this.http.get(this.neoUrl + startDate + '&end_date=' +
@@ -27,18 +30,16 @@ export class DataService {
   }
 
   getAllNeos() {
-    return this.http.get(this.neoUrl);
+    return this.http.get(this.neoUrl + '&api_key=' + this.key);
   }
 
+  // APOD
+
   getApod() {
-    return this.http.get(this.rootUrl + '/apod/');
+    return this.http.get(this.rootUrl + '/apod');
   }
 
   getApodByDate(apodDate: string) {
     return this.http.get(this.rootUrl + '/apod/' + apodDate);
-  }
-
-  getApods() {
-    return this.http.get(this.rootUrl + '/apods');
   }
 }

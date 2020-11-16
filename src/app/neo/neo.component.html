@@ -5,9 +5,10 @@
   <h1 class="neo-title">Asteroids, Oh my...<br>
   </h1>
 
-  <div class="number">
+  <div class="number"  *ngIf="neo.element_count">
     {{neo.element_count}}
   </div>
+
 	<div class="row cards">
     <div *ngFor="let n of neo.near_earth_objects[startDate]"
     class="card col-md-4 col-sm-6 col-xs-12"
@@ -27,7 +28,7 @@
             <strong>
             Absolute magnitude:
             </strong>
-            {{ n.absolute_magnitude_h}}
+            {{ n.absolute_magnitude_h }}
             <hr>
             <strong>
             Estimated diameter:
@@ -53,7 +54,7 @@
             <strong>
             Relative velocity:
             </strong>
-            {{ n.close_approach_data[0].relative_velocity.kilometers_per_hour}} km/h
+            {{ n.close_approach_data[0].relative_velocity.kilometers_per_hour }} km/h
             <hr>
             </h6>
         </div>

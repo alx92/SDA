@@ -16,10 +16,8 @@ export class HomeComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
 
-
   getIssLoc() {
     return this.dataService.getIssLocation().subscribe((data: any) => {
-
       const loc = new google.maps.LatLng(+data.iss_position.latitude, +data.iss_position.longitude);
       const mapProperties = {
         center: loc,
