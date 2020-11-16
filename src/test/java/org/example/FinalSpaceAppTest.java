@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Unit test for simple App.
  */
-public class ConsumingRestApplicationTest
+public class FinalSpaceAppTest
 {
     /**
      * Rigorous Test :-)
