@@ -24,14 +24,13 @@ export class DataService {
 
   // NeoWs
 
-  getNeo(startDate: string, endDate: string){
-    return this.http.get(this.neoUrl + startDate + '&end_date=' +
-    endDate + '&api_key=' + this.key);
+  getNeo(startDate: string, endDate: string) {
+    return this.http.get(this.neoUrl + startDate + '&end_date=' + endDate + '&api_key=' + this.key);
   }
 
-  getAllNeos() {
-    return this.http.get(this.neoUrl + '&api_key=' + this.key);
-  }
+  // getAllNeos() {
+  //   return this.http.get(this.neoUrl + '&api_key=' + this.key);
+  // }
 
   // APOD
 
