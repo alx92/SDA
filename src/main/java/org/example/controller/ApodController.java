@@ -18,10 +18,6 @@ public class ApodController {
     @Autowired
     ApodService apodService;
 
-    // TODO - change get mapping endpoints to be just one endpoint
-    // make an endpoint that takes today's date and then change the date when the user enters input
-    // also change in frontend the get apod and getApodByDate to only one method that take today's date
-
     @GetMapping("/apod")
     public ApodModel getApod() {
        return apodService.getApod(LocalDate.now().toString());
@@ -32,7 +28,6 @@ public class ApodController {
         if (date == null) {
             return ResponseEntity.badRequest().build();
         }
-
         return ResponseEntity.ok().body(apodService.getApod(date));
     }
 }
