@@ -9,7 +9,7 @@ export class DataService {
 
   rootUrl = '/api';
 
-  key = 'F2t9eSuecY54NKs8RH7PZ97xdeFXfg6M4A81sVbF';
+  key = 'private key';
 
   neoUrl = 'https://api.nasa.gov/neo/rest/v1/feed?start_date=';
 
