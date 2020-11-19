@@ -24,19 +24,8 @@ export class NeoComponent implements OnInit {
     this.dataService.getNeo( this.startDate, this.endDate ).subscribe(( data: any ) => {
       console.log(data);
       this.neo = data;
-      // this.neo = data.near_earth_objects[this.startDate];
-      // this.neo = data.near_earth_objects[this.startDate].filter((el: any) => el.is_potentially_hazardous_asteroid);
     });
   }
-
-  // getNeoInit() {
-  //   this.dataService.getAllNeos().subscribe(( data: any ) => {
-  //     console.log(data);
-  //     this.neo = data;
-  //     // this.neo = data.near_earth_objects[this.startDate];
-  //     // this.neo = data.near_earth_objects[this.startDate].filter((el: any) => el.is_potentially_hazardous_asteroid);
-  //   });
-  // }
 
   ngOnInit(): void {
      this.startDate = this.transformDate(this.date);

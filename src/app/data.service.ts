@@ -12,7 +12,6 @@ export class DataService {
   key = 'F2t9eSuecY54NKs8RH7PZ97xdeFXfg6M4A81sVbF';
 
   neoUrl = 'https://api.nasa.gov/neo/rest/v1/feed?start_date=';
-  // neoUrl = 'https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=';
 
   issUrl = 'http://api.open-notify.org/iss-now.json';
 
@@ -27,10 +26,6 @@ export class DataService {
   getNeo(startDate: string, endDate: string) {
     return this.http.get(this.neoUrl + startDate + '&end_date=' + endDate + '&api_key=' + this.key);
   }
-
-  // getAllNeos() {
-  //   return this.http.get(this.neoUrl + '&api_key=' + this.key);
-  // }
 
   // APOD
 
