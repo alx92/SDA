@@ -1,6 +1,6 @@
 # SDA
-Website created for final SDA project - Spring Boot + Angular 10 + MySQL
+Website :rocket: created for final SDA project - Spring Boot + Angular 10 + MySQL
 
-frontend branch - Angular and Bootstrap
+:star: frontend branch - Angular and Bootstrap
 
-github branch -  backend part with Java and Spring Boot
+:coffee: github branch -  backend part with Java and Spring Boot
