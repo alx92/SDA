@@ -5,4 +5,4 @@ The project is built using REST API with Spring Boot and using Nasa's open API's
 
 :star: frontend branch - Angular and Bootstrap
 
-:coffee: github branch -  backend part with Java and Spring Boot
+:coffee: backend branch -  Java and Spring Boot
